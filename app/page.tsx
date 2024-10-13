@@ -16,6 +16,9 @@ declare global {
   }
 }
 
+
+declare const gtag: Function;
+
 export default function Home() {
   const [response, setResponse] = useState<string>('');
 
