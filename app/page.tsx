@@ -52,9 +52,9 @@ export default function Home() {
         <CardHeader>
           <div className="flex flex-col items-center space-y-4">
 
-            <CardTitle className="text-2xl font-bold text-center">Ask Freak Bob Anything</CardTitle>
+            <CardTitle className="text-2xl font-bold text-center">Meet Sad Bob</CardTitle>
             <Avatar className="w-24 h-24">
-              <AvatarImage src="/images/freak-bob.webp" alt="Freakbob" />
+              <AvatarImage src="/images/sad-bob.webp" alt="Freakbob" />
               <AvatarFallback>FB</AvatarFallback>
             </Avatar>
           </div>
@@ -63,7 +63,7 @@ export default function Home() {
 
           <form action={getBob} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="theme">Ask Freak bob how he feels 😊</Label>
+              <Label htmlFor="theme">Ask sad Bob how he feels... 😊</Label>
               <Input type="text" id="input" name="input" placeholder="Enter something..." className="w-full" />
             </div>
             <Button type="submit" className="w-full">Generate</Button>
@@ -71,10 +71,10 @@ export default function Home() {
         </CardContent>
         <CardFooter>
           <div className="w-full">
-            <h3 className="font-semibold mb-2">Freakbob's Response:</h3>
+            <h3 className="font-semibold mb-2">Sadbob's Response:</h3>
             <pre className="bg-gray-100 p-3 rounded-md text-sm whitespace-pre-wrap break-words min-h-[60px]">
 
-              {response || 'Freakbob\'s response will appear here.'}
+              {response || 'SadBob\'s response will appear here.'}
             </pre>
           </div>
         </CardFooter>
