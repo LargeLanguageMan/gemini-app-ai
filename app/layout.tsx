@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 //export const metadata: Metadata = {
-//  title: "Sadbob",
+//  title: "Sadbob",            
 //  description: "Meet Sadbob - A Google Gemini AI wrapper",
 //};
 
@@ -30,9 +30,7 @@ export const metadata: Metadata = {
     siteName: 'Sadbob',
     images: [
       {
-        url: '/images/background.webp', // Or use absolute URL
-        width: 800,
-        height: 600,
+        url: '/images/background-2.png', // Or use absolute URL
         alt: 'Sadbob Background',
       },
     ],
@@ -43,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sadbob',
     description: 'Meet Sadbob - A Google Gemini AI wrapper',
-    images: ['/images/background.png'], // Or use absolute URL
+    images: ['/images/background-2.png'], // Or use absolute URL
   },
   icons: {
     icon: '/favicon.ico',
