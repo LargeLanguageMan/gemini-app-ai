@@ -26,25 +26,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Sadbob',
     description: 'Meet Sadbob - A Google Gemini AI wrapper',
-    url: 'https://sadbob.aiprojectlabs.com', // Replace with your actual domain
-    siteName: 'Sadbob',
     images: [
       {
-        url: '/images/background-2.png', // Or use absolute URL
-        alt: 'Sadbob Background',
+        url: '/images/background-2.png',
+        width: 1200,  // Standard OG image dimensions
+        height: 630,  // Standard OG image dimensions
+        alt: 'Background image of Sadbob',
       },
     ],
-    locale: 'en_US',
     type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Sadbob',
-    description: 'Meet Sadbob - A Google Gemini AI wrapper',
-    images: ['/images/background-2.png'], // Or use absolute URL
-  },
-  icons: {
-    icon: '/favicon.ico',
   },
 };
 
