@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: 'Meet Sadbob - A Google Gemini AI wrapper',
     images: [
       {
-        url: 'https://sadbob.aiprojectlabs.com/images/background-2.png',
+        url: 'https://sadbob.aiprojectlabs.com/images/background.webp',
         width: 1200,
         height: 630,
         alt: 'Background image of Sadbob',
