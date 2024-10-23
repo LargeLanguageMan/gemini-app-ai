@@ -25,6 +25,10 @@ export default function Home() {
   async function getBob(subject: FormData) {
 
     const input = subject.get('input')?.toString() ?? '';
+
+    gtag('event', 'user_ai_text', {
+      'input_text': input,
+    });
     const response = await fetch('/api/gemini', {
       method: 'POST',
       headers: {
