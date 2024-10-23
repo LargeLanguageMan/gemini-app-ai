@@ -22,24 +22,31 @@ declare const gtag: Function;
 export default function Home() {
   const [response, setResponse] = useState<string>('');
 
+  async function getBob(subject: FormData) {
 
-  async function getBob(formData: FormData) {
-    const input = formData.get('input')?.toString() ?? '';
-    // Push the event to the data layer
-//  window.dataLayer = window.dataLayer || [];
-//  window.dataLayer.push({
-//    event: "ai_generate_text",
-//    inputText: input,
-//  });
-
-
-    gtag('event', 'user_ai_text', {
-      'input_text': input,
+    const input = subject.get('input')?.toString() ?? '';
+    const response = await fetch('/api/gemini', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ input: subject }), 
     });
-    const answer = await freakBob(input);
-    setResponse(answer);
 
+    const data = await response.json();
+    console.log("this is hidden api:" + data.text)
+    return setResponse(data.text);
   }
+
+//  async function getBob(formData: FormData) {
+//    const input = formData.get('input')?.toString() ?? '';
+//    gtag('event', 'user_ai_text', {
+//      'input_text': input,
+//    });
+//    const answer = await freakBob(input);
+//    setResponse(answer);
+
+//  }
 
 
 
