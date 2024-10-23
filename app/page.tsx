@@ -25,20 +25,24 @@ export default function Home() {
   async function getBob(subject: FormData) {
 
     const input = subject.get('input')?.toString() ?? '';
+//    console.log("this is the input: "+ JSON.stringify({input:subject}));
 
-    gtag('event', 'user_ai_text', {
-      'input_text': input,
-    });
+
+
     const response = await fetch('/api/gemini', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ input: subject }), 
+      body: JSON.stringify({input}), 
     });
 
     const data = await response.json();
-    console.log("this is hidden api:" + data.text)
+    console.log(data.text);
+
+    gtag('event', 'user_ai_text', {
+      'input_text': input,
+    });
     return setResponse(data.text);
   }
 
